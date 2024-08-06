@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@abandonware/noble": "1.9.2-25",
+    "ble-serial": "file:../ble-serial/ble-serial-0.5.3.tgz",
+    "johnny-five": "^2.1.0"
+  }
+}

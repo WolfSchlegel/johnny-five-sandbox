@@ -1,6 +1,10 @@
+const BLESerialPort = require('ble-serial').SerialPort;
 const five = require("johnny-five");
 
-const board = new five.Board({port: "/dev/tty.usbmodem2101"});
+// const board = new five.Board({port: "/dev/tty.usbmodem1101"});
+
+var bleSerial = new BLESerialPort({localName: 'FIRMATA'});
+var board = new five.Board({port: bleSerial, repl: true});
 
 board.on("ready",() => {
     const led = new five.Led(13);
